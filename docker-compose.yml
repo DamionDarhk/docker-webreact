@@ -1,0 +1,19 @@
+version: '3'
+services: 
+  react-webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports: 
+      - "3000:3000"
+    volumes:
+      - /nodefront/node_modules
+      - .:/nodefront
+  react-webapp-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /nodefront/node_modules
+      - .:/nodefront
+    command: ["npm", "run", "test"]
