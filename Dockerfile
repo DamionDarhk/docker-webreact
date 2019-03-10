@@ -2,7 +2,7 @@
 
 #for build phase
 FROM node:alpine as builder
-WORKDIR './nodefront'
+WORKDIR '/nodefront'
 COPY package.json .
 RUN npm install
 COPY . .

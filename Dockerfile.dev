@@ -1,6 +1,6 @@
 FROM node:alpine
 
-WORKDIR './nodefront'
+WORKDIR '/nodefront'
 
 COPY package.json .
 RUN npm install
