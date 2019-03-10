@@ -10,5 +10,6 @@ RUN npm run build
 
 #for run phase
 FROM nginx
+EXPOSE 80
 COPY --from=builder /nodefront/build /usr/share/nginx/html
 #nginx will automatically start the nginx server without the need to entering any specified command
