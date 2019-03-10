@@ -1,0 +1,9 @@
+sudo : required
+services:
+  - docker
+
+before_install:
+  - docker build -t arghajeet/docker-webreact -f Dockerfile.dev .
+
+script:
+  - docker run arghajeet/docker-webreact npm run test -- --coverage
